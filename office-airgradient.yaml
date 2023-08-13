@@ -1,0 +1,6 @@
+---
+substitutions:
+  devicename: office
+  upper_devicename: Office
+
+<<: !include airgradient.yaml
