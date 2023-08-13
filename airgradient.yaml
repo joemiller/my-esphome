@@ -319,16 +319,16 @@ interval:
             auto now = (id(ha_time).now().timestamp / intervalSecs) * intervalSecs; // quantize
 
             // TODO add tvoc and nox
-            //     "airgradient.office.tvoc "     + to_string(id(tvoc).state)              + " " + to_string(now) + "\n" +
-            //     "airgradient.office.nox "      + to_string(id(nox).state)               + " " + to_string(now) + "\n" +
-            return "airgradient.office.co2 "      + to_string(id(co2).state)               + " " + to_string(now) + "\n" +
-                   "airgradient.office.pm1 "      + to_string(id(pm1).state)               + " " + to_string(now) + "\n" +
-                   "airgradient.office.pm25 "     + to_string(id(pm2_5).state)             + " " + to_string(now) + "\n" +
-                   "airgradient.office.pm25_aqi " + to_string(id(pm2_5_aqi).state)         + " " + to_string(now) + "\n" +
-                   "airgradient.office.pm10 "     + to_string(id(pm10).state)              + " " + to_string(now) + "\n" +
-                   "airgradient.office.wifi "     + to_string(id(wifi_signal_db).state)    + " " + to_string(now) + "\n" +
-                   "airgradient.office.wifi_pct " + to_string(id(wifi_signal_pct).state)   + " " + to_string(now) + "\n" +
-                   "airgradient.office.humidity " + to_string(id(humidity).state)          + " " + to_string(now) + "\n" +
-                   "airgradient.office.uptime "   + to_string(id(device_uptime).state)     + " " + to_string(now) + "\n" +
-                   "airgradient.office.temp_f "   + to_string((id(temp).state * 1.8) + 32) + " " + to_string(now) + "\n" +
-                   "airgradient.office.temp "     + to_string(id(temp).state)              + " " + to_string(now) + "\n";
+            //     "airgradient.${devicename}.tvoc "     + to_string(id(tvoc).state)              + " " + to_string(now) + "\n" +
+            //     "airgradient.${devicename}.nox "      + to_string(id(nox).state)               + " " + to_string(now) + "\n" +
+            return "airgradient.${devicename}.co2 "      + to_string(id(co2).state)               + " " + to_string(now) + "\n" +
+                   "airgradient.${devicename}.pm1 "      + to_string(id(pm1).state)               + " " + to_string(now) + "\n" +
+                   "airgradient.${devicename}.pm25 "     + to_string(id(pm2_5).state)             + " " + to_string(now) + "\n" +
+                   "airgradient.${devicename}.pm25_aqi " + to_string(id(pm2_5_aqi).state)         + " " + to_string(now) + "\n" +
+                   "airgradient.${devicename}.pm10 "     + to_string(id(pm10).state)              + " " + to_string(now) + "\n" +
+                   "airgradient.${devicename}.wifi "     + to_string(id(wifi_signal_db).state)    + " " + to_string(now) + "\n" +
+                   "airgradient.${devicename}.wifi_pct " + to_string(id(wifi_signal_pct).state)   + " " + to_string(now) + "\n" +
+                   "airgradient.${devicename}.humidity " + to_string(id(humidity).state)          + " " + to_string(now) + "\n" +
+                   "airgradient.${devicename}.uptime "   + to_string(id(device_uptime).state)     + " " + to_string(now) + "\n" +
+                   "airgradient.${devicename}.temp_f "   + to_string((id(temp).state * 1.8) + 32) + " " + to_string(now) + "\n" +
+                   "airgradient.${devicename}.temp "     + to_string(id(temp).state)              + " " + to_string(now) + "\n";
